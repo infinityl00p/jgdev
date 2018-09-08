@@ -14,7 +14,7 @@ var canvas = document.getElementById('cvs'),
   height = canvas.height = document.body.offsetHeight,
   width = canvas.width = document.body.offsetWidth,
   collection = [],
-  num_drops = 400,
+  num_drops = 100,
   gravity = 1,
   windforce = 0,
   windmultiplier = 0.009,
@@ -106,13 +106,23 @@ function init() {
     width = canvas.width = document.body.offsetWidth;
   };
 
-  $.fn.isInViewport = function() {
-    var elementTop = $(this).offset().top;
-    var elementBottom = elementTop + $(this).outerHeight();
-    var viewportTop = $(window).scrollTop();
-    var viewportBottom = viewportTop + $(window).height();
-    return elementBottom > viewportTop && elementTop < viewportBottom;
-  };
+
+  //Handle initial light switch click
+  $('.light-switch').click((e) => {
+    if ($('body').hasClass('body--colored')) {
+      $('body').css('background-color', '#ffffff');
+      collection.forEach((drop) => {
+        drop.color= "rgb(78, 169, 218)";
+      });
+
+
+    } else {
+      $('body').css('background-color', 'rgb(78, 169, 218)');
+      collection.forEach((drop) => {
+        drop.color= "#ffffff";
+      });
+    }
+  });
 
 
   var header = $('header');
@@ -121,27 +131,47 @@ function init() {
 
   //FIXME: Eating up resources
   $(window).on("resize scroll", function() {
-    if (header.isInViewport()) {
+    var body = $('body');
+
+    if (body.hasClass('body--colored')) {
       collection.forEach((drop) => {
-        drop.color= "rgb(78, 169, 218)";
-      })
+        drop.color= "#ffffff";
+      });
+    }
+
+    if (header.isInViewport()) {
+      if (body.hasClass('body--colored')) {
+        body.css('background-color', 'rgb(78, 169, 218)');
+      } else {
+        body.css('background-color', '#ffffff');
+        collection.forEach((drop) => {
+          drop.color= "rgb(78, 169, 218)";
+        });
+      }
     }
 
     if (about.isInViewport()) {
-      collection.forEach((drop) => {
-        drop.color= "#f62459";
-        drop.vx = drop.vx * 5;
-      })
+      if (body.hasClass('body--colored')) {
+        body.css('background-color', '#89303d');
+      } else {
+        body.css('background-color', '#ffffff');
+        collection.forEach((drop) => {
+          drop.color= "#89303d";
+        });
+      }
     }
 
     if (portfolio.isInViewport()) {
       windmultiplier = 0.050;
 
-      collection.forEach((drop) => {
-        drop.color= "#2ecc71";
-        drop.vx = drop.vx * 10;
-        drop.vy = drop.vy * 10;
-      })
+      if (body.hasClass('body--colored')) {
+        body.css('background-color', '#455A64');
+      } else {
+        body.css('background-color', '#ffffff');
+        collection.forEach((drop) => {
+          drop.color= "#455A64";
+        });
+      }
     }
   });
 }

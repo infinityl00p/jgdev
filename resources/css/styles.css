@@ -11,6 +11,19 @@ html, body {
   font-size: 62.5%;
 }
 
+body {
+  transition: 500ms ease;
+  /* background-color: #fff; */
+}
+
+body.body--colored {
+  color: #fff;
+  background-color: rgb(78, 169, 218);
+}
+
+.body--colored svg path { fill: rgb(255, 255, 255); }
+.body--colored .about .section__text { color: #fff; }
+
 canvas {
   position: fixed;
   z-index: -1;

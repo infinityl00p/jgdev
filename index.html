@@ -8,11 +8,12 @@
     <link rel="stylesheet" type="text/css" media="screen" href="resources/css/styles.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,500,700" rel="stylesheet">
   </head>
-  <body>
+  <body class="body--white">
 
     <canvas id="cvs"></canvas>
 
     <div class="wrapper">
+      <button class="light-switch">Dark/light</button>
       <header class="full-view-height">
         <div class="header__text">
           <h1>
@@ -48,11 +49,11 @@
         <div class="about-container">
             <div class="section__title section__title--about">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248.99 49.68">
-                <path class='animated-letter' fill="#f62459" stroke="rgba(0,0,0,0.5)" d="M-80.29,39.74h-21.45l-3,8.28H-116L-97.42,0h12.81L-66.1,48H-77.26ZM-99,30.88h15.91L-91,8.85Z" transform="translate(116 0.4)"/>
-                <path class='animated-letter' fill="#f62459" stroke="rgba(0,0,0,0.5)" d="M-58.23,0H-33C-23.81,0-19.13,5.8-19.13,12.2c0,6-3.74,10.08-8.28,11C-22.3,24-18.23,29-18.23,35c0,7.2-4.83,13-14,13h-26V0Zm23,19.3c3.46,0,5.62-2.23,5.62-5.33s-2.12-5.26-5.62-5.26H-48V19.26h12.77Zm0.36,20c3.89,0,6.19-2.24,6.19-5.69,0-3-2.16-5.62-6.19-5.62H-48V39.28Z" transform="translate(116 0.4)"/>
-                <path class='animated-letter' fill="#f62459" stroke="rgba(0,0,0,0.5)" d="M13.43-.4C28-.4,38.56,10,38.56,24.44S28,49.28,13.43,49.28-11.63,38.92-11.63,24.44-1-.4,13.43-0.4Zm0,9.07c-8.86,0-14.55,6.77-14.55,15.77S4.57,40.22,13.43,40.22s14.62-6.84,14.62-15.77S22.29,8.67,13.43,8.67Z" transform="translate(116 0.4)"/>
-                <path class='animated-letter' fill="#f62459" stroke="rgba(0,0,0,0.5)" d="M108.68,9h-14V0H133V9H119V48H108.68V9Z" transform="translate(116 0.4)"/>
-                <path class='animated-letter' fill="#f62459" stroke="rgba(0,0,0,0.5)" d="M45.16,0H55.53V28.51c0,6.7,3.67,11.31,11.16,11.31s11-4.61,11-11.31V0H88.08V28.8c0,12-6.84,20.09-21.39,20.09s-21.53-8.21-21.53-20V0Z" transform="translate(116 0.4)"/>
+                <path class='animated-letter' fill="#89303d" stroke="rgba(0,0,0,0.5)" d="M-80.29,39.74h-21.45l-3,8.28H-116L-97.42,0h12.81L-66.1,48H-77.26ZM-99,30.88h15.91L-91,8.85Z" transform="translate(116 0.4)"/>
+                <path class='animated-letter' fill="#89303d" stroke="rgba(0,0,0,0.5)" d="M-58.23,0H-33C-23.81,0-19.13,5.8-19.13,12.2c0,6-3.74,10.08-8.28,11C-22.3,24-18.23,29-18.23,35c0,7.2-4.83,13-14,13h-26V0Zm23,19.3c3.46,0,5.62-2.23,5.62-5.33s-2.12-5.26-5.62-5.26H-48V19.26h12.77Zm0.36,20c3.89,0,6.19-2.24,6.19-5.69,0-3-2.16-5.62-6.19-5.62H-48V39.28Z" transform="translate(116 0.4)"/>
+                <path class='animated-letter' fill="#89303d" stroke="rgba(0,0,0,0.5)" d="M13.43-.4C28-.4,38.56,10,38.56,24.44S28,49.28,13.43,49.28-11.63,38.92-11.63,24.44-1-.4,13.43-0.4Zm0,9.07c-8.86,0-14.55,6.77-14.55,15.77S4.57,40.22,13.43,40.22s14.62-6.84,14.62-15.77S22.29,8.67,13.43,8.67Z" transform="translate(116 0.4)"/>
+                <path class='animated-letter' fill="#89303d" stroke="rgba(0,0,0,0.5)" d="M108.68,9h-14V0H133V9H119V48H108.68V9Z" transform="translate(116 0.4)"/>
+                <path class='animated-letter' fill="#89303d" stroke="rgba(0,0,0,0.5)" d="M45.16,0H55.53V28.51c0,6.7,3.67,11.31,11.16,11.31s11-4.61,11-11.31V0H88.08V28.8c0,12-6.84,20.09-21.39,20.09s-21.53-8.21-21.53-20V0Z" transform="translate(116 0.4)"/>
               </svg>
             </div>
 
@@ -67,15 +68,15 @@
       <section class="portfolio full-view-height">
         <div class="section__title section__title--portfolio">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 406 51.28">
-            <path class='animated-letter' fill="#2ecc71" stroke="rgba(0,0,0,0.5)" d="M-125.6-2h22.47C-92.69-2-87,5.06-87,13.48s-5.77,15.34-16.13,15.34h-12.24V46H-125.6V-2Zm21.1,8.79h-10.87V20h10.87c4,0,7.06-2.59,7.06-6.62S-100.47,6.79-104.5,6.79Z" transform="translate(125.6 2)"/>
-            <path class='animated-letter' fill="#2ecc71" stroke="rgba(0,0,0,0.5)" d="M-54.42-.4C-39.88-.4-29.29,10-29.29,24.44S-39.88,49.28-54.42,49.28-79.48,38.92-79.48,24.44-68.9-.4-54.42-0.4Zm0,9.07C-63.28,8.67-69,15.44-69,24.44s5.69,15.77,14.55,15.77S-39.8,33.38-39.8,24.44-45.56,8.67-54.42,8.67Z" transform="translate(125.6 2)"/>
-            <path class='animated-letter' fill="#2ecc71" stroke="rgba(0,0,0,0.5)" d="M-5.83 31.26h-7.48V48.44H-23.54v-48H-1.07c10,0,16.13,6.55,16.13,15.48,0,8.5-5.33,13-10.52,14.26l10.8,18.26H3.61Zm3.29-22H-13.31V22.44H-2.54c4.11,0,7.21-2.59,7.21-6.62S1.52,9.23-2.54,9.23Z" transform="translate(125.6 2)"/>
-            <path class='animated-letter' fill="#2ecc71" stroke="rgba(0,0,0,0.5)" d="M34.65 9.44h-14v-9H59v9H45v39H34.65v-39Z" transform="translate(125.6 2)"/>
-            <path class='animated-letter' fill="#2ecc71" stroke="rgba(0,0,0,0.5)" d="M67.32 0.44h34V9.23H77.55V19.67H100.8v8.77H77.55v20H67.32v-48Z" transform="translate(125.6 2)"/>
-            <path class='animated-letter' fill="#2ecc71" stroke="rgba(0,0,0,0.5)" d="M134-.4C148.51-.4 159.1,10,159.1,24.44S148.51,49.28,134,49.28s-25.06-10.36-25.06-24.84S119.49-.4,134-0.4Zm0,9.07c-8.86,0-14.55,6.77-14.55,15.77S125.11,40.22,134,40.22s14.62-6.84,14.62-15.77S142.83,8.67,134,8.67Z" transform="translate(125.6 2)"/>
-            <path class='animated-letter' fill="#2ecc71" stroke="rgba(0,0,0,0.5)" d="M171.87 0.44h10.22v39H202.4v9H171.87v-48Z" transform="translate(125.6 2)"/>
-            <path class='animated-letter' fill="#2ecc71" stroke="rgba(0,0,0,0.5)" d="M211.19 0.44h10.22v48H211.19v-48Z" transform="translate(125.6 2)"/>
-            <path class='animated-letter' fill="#2ecc71" stroke="rgba(0,0,0,0.5)" d="M255.27-.4C269.81-.4,280.4,10,280.4,24.44s-10.59,24.84-25.13,24.84-25.06-10.36-25.06-24.84S240.79-.4,255.27-0.4Zm0,9.07c-8.86,0-14.55,6.77-14.55,15.77s5.69,15.77,14.55,15.77,14.62-6.84,14.62-15.77S264.13,8.67,255.27,8.67Z" transform="translate(125.6 2)"/>
+            <path class='animated-letter' fill="#455A64" stroke="rgba(0,0,0,0.5)" d="M-125.6-2h22.47C-92.69-2-87,5.06-87,13.48s-5.77,15.34-16.13,15.34h-12.24V46H-125.6V-2Zm21.1,8.79h-10.87V20h10.87c4,0,7.06-2.59,7.06-6.62S-100.47,6.79-104.5,6.79Z" transform="translate(125.6 2)"/>
+            <path class='animated-letter' fill="#455A64" stroke="rgba(0,0,0,0.5)" d="M-54.42-.4C-39.88-.4-29.29,10-29.29,24.44S-39.88,49.28-54.42,49.28-79.48,38.92-79.48,24.44-68.9-.4-54.42-0.4Zm0,9.07C-63.28,8.67-69,15.44-69,24.44s5.69,15.77,14.55,15.77S-39.8,33.38-39.8,24.44-45.56,8.67-54.42,8.67Z" transform="translate(125.6 2)"/>
+            <path class='animated-letter' fill="#455A64" stroke="rgba(0,0,0,0.5)" d="M-5.83 31.26h-7.48V48.44H-23.54v-48H-1.07c10,0,16.13,6.55,16.13,15.48,0,8.5-5.33,13-10.52,14.26l10.8,18.26H3.61Zm3.29-22H-13.31V22.44H-2.54c4.11,0,7.21-2.59,7.21-6.62S1.52,9.23-2.54,9.23Z" transform="translate(125.6 2)"/>
+            <path class='animated-letter' fill="#455A64" stroke="rgba(0,0,0,0.5)" d="M34.65 9.44h-14v-9H59v9H45v39H34.65v-39Z" transform="translate(125.6 2)"/>
+            <path class='animated-letter' fill="#455A64" stroke="rgba(0,0,0,0.5)" d="M67.32 0.44h34V9.23H77.55V19.67H100.8v8.77H77.55v20H67.32v-48Z" transform="translate(125.6 2)"/>
+            <path class='animated-letter' fill="#455A64" stroke="rgba(0,0,0,0.5)" d="M134-.4C148.51-.4 159.1,10,159.1,24.44S148.51,49.28,134,49.28s-25.06-10.36-25.06-24.84S119.49-.4,134-0.4Zm0,9.07c-8.86,0-14.55,6.77-14.55,15.77S125.11,40.22,134,40.22s14.62-6.84,14.62-15.77S142.83,8.67,134,8.67Z" transform="translate(125.6 2)"/>
+            <path class='animated-letter' fill="#455A64" stroke="rgba(0,0,0,0.5)" d="M171.87 0.44h10.22v39H202.4v9H171.87v-48Z" transform="translate(125.6 2)"/>
+            <path class='animated-letter' fill="#455A64" stroke="rgba(0,0,0,0.5)" d="M211.19 0.44h10.22v48H211.19v-48Z" transform="translate(125.6 2)"/>
+            <path class='animated-letter' fill="#455A64" stroke="rgba(0,0,0,0.5)" d="M255.27-.4C269.81-.4,280.4,10,280.4,24.44s-10.59,24.84-25.13,24.84-25.06-10.36-25.06-24.84S240.79-.4,255.27-0.4Zm0,9.07c-8.86,0-14.55,6.77-14.55,15.77s5.69,15.77,14.55,15.77,14.62-6.84,14.62-15.77S264.13,8.67,255.27,8.67Z" transform="translate(125.6 2)"/>
           </svg>
         </div>
 
