@@ -1,5 +1,6 @@
 /* primary color: rgb(78, 169, 218) */
 /* secondary color: rgb(32, 33, 33) */
+* { box-sizing: border-box; }
 
 html, body {
   height: 100%;
@@ -11,10 +12,7 @@ html, body {
   font-size: 62.5%;
 }
 
-body {
-  transition: 500ms ease;
-  /* background-color: #fff; */
-}
+body { transition: 500ms ease; }
 
 body.body--colored {
   color: #fff;
@@ -22,7 +20,7 @@ body.body--colored {
 }
 
 .body--colored svg path { fill: rgb(255, 255, 255); }
-.body--colored .about .section__text { color: #fff; }
+.body--colored .about .section__content--text { color: #fff; }
 
 canvas {
   position: fixed;
@@ -30,7 +28,7 @@ canvas {
 }
 
 .wrapper {
-  max-width: 1180px;
+  max-width: 1110px;
   margin: 0 auto;
 }
 
@@ -52,9 +50,7 @@ header { height: 100vh; }
   text-align: left;
 }
 
-.name-container {
-  margin: 2rem 0;
-}
+.name-container { margin: 2rem 0; }
 .name svg { height: 8rem; }
 .section__title svg {
   height: 5rem;
@@ -65,12 +61,10 @@ header { height: 100vh; }
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
   fill-opacity: 0;
-  animation: draw 2s ease-in forwards;
-  -webkit-animation: draw 2s ease-in forwards;
-
-  -moz-animation: draw 2s ease-in forwards;
-
-  -o-animation: draw 2s ease-in forwards;
+  animation: draw 1.5s ease-in forwards;
+  -webkit-animation: draw 1.5s ease-in forwards;
+  -moz-animation: draw 1.5s ease-in forwards;
+  -o-animation: draw 1.5s ease-in forwards;
 }
 
 @keyframes draw {
@@ -83,22 +77,39 @@ header { height: 100vh; }
   100% { fill-opacity: 1; }
 }
 
+.section__content {
+  position: relative;
+  top: 5rem;
+}
 
-.section__text {
+.section__content--text {
   font-size: 2.5rem;
   font-weight: 200;
 }
 
-.section__title {
-  margin: 5rem 0;
-}
-
 .about { position: relative; }
 
-.about .section__text {
-  color: #666;
-}
+.about .section__content--text { color: #666; }
 
+@media (max-width: 800px) {
+  .wrapper { padding: 0 1.5rem; }
+
+  .section__content--text {
+    font-size: 1.5rem;
+    font-weight: 200;
+    line-height: 1.5em;
+    letter-spacing: 0.05em;
+  }
+
+  .tagline {
+    font-size: 2.5rem;
+    font-weight: 200;
+    text-align: left;
+  }
+
+  .name svg { height: 5rem; }
+  .section__title svg { height: 3rem; }
+}
 
 /***************************************************
   Toggle Button
@@ -180,6 +191,7 @@ header { height: 100vh; }
   left: 4.5rem;
   color: #666;
 }
+
 /***************************************************
   End of Toggle Button
 ***************************************************/
@@ -191,7 +203,7 @@ header { height: 100vh; }
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  transition: opacity .3s ease-out
+  padding: 0;
 }
 
 .portfolio__item {
@@ -207,7 +219,7 @@ header { height: 100vh; }
   position: relative;
   display: block;
   z-index: 10;
-  box-shadow: 8px 8px 0 rgba(0,0,0,.15);
+  box-shadow: 1rem 1.5rem 0 rgba(0,0,0,.15);
   overflow: hidden;
 }
 
@@ -219,6 +231,11 @@ header { height: 100vh; }
   width: 100%;
   color: #6a6a6a;
   z-index: 10;
+ }
+
+ .body--white .bar {
+   background-color: #666;
+   color: #fff;
  }
 
  .bar h2 {
@@ -293,4 +310,10 @@ header { height: 100vh; }
   position: absolute;
   top: 0;
   left: 0;
+}
+
+@media (max-width: 800px) {
+  .grid-list .portfolio__item {
+      width: 100%;
+  }
 }
