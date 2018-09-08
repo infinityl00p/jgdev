@@ -102,3 +102,157 @@ header { height: 100vh; }
   top: 50%;
   transform: translateY(-50%);
 }
+
+
+/***************************************************
+  Toggle Button
+***************************************************/
+.toggle {
+  animation-name: bounce;
+  animation-delay: 2s;
+  animation-duration: 1s;
+  background-color: #ddddde;
+  border-radius: 6rem;
+  box-shadow: 0 1px 1px 0 rgba(255, 255, 255,.4), 0 1px 0 0 rgba(0, 0, 0, 0.10) inset;
+  cursor: pointer;
+  width: 8rem;
+  height: 4rem;
+  overflow: hidden;
+  position: relative;
+  top: 5rem;
+  transition: all .25s linear;
+}
+
+@keyframes bounce {
+  0% { top: 3rem; }
+  20% { top: 5rem; }
+  40% { top: 3rem; }
+  60% { top: 5rem; }
+  80% { top: 3rem; }
+  100% { top: 5rem; }
+}
+
+.toggle .slide {
+  color: #818283;
+  color: rgba(0,0,0,.15);
+  background: #efefef;
+  border-radius: 50%;
+  font-size: 2rem;
+  line-height: 3rem;
+  text-align: center;
+  text-decoration: none;
+  height: 3rem;
+  width: 3rem;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15), 0 1px 1px 0 rgba(255, 255, 255, .8) inset;
+  transition: all 0.3s cubic-bezier(0.43, 1.3, 0.86, 1);
+}
+
+.toggle .slide span{
+  text-shadow: 0 1px 1px rgba(255,255,255,.7), 0 0 1px rgba(0,0,0,.3);
+}
+.toggle .slide:before,
+.toggle .slide:after {
+  color: #fff;
+  content: "\f186";
+  font-family: fontAwesome;
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+  -webkit-font-smoothing: antialiased;
+  position: absolute;
+}
+.toggle .slide:before {
+  right: -3rem;
+  color: #2a2b2c;
+  opacity: 0.2;
+}
+.toggle .slide:after {
+  content: "\f185";
+  left: -3rem;
+  color: #fff;
+}
+.toggle.on {
+  background: #666;
+}
+.toggle.on .slide {
+  left: 4.5rem;
+  color: #666;
+}
+/***************************************************
+  End of Toggle Button
+***************************************************/
+
+/***************************************************
+  Portfolio Item
+***************************************************/
+.screen {
+  position: relative;
+  display: block;
+  z-index: 10;
+  box-shadow: 8px 8px 0 rgba(0,0,0,.15);
+  overflow: hidden;
+  width: 30rem;
+}
+
+.bar {
+  display: block;
+  position: relative;
+  height: 24px;
+  background-color: #ddd;
+  width: 100%;
+  color: #6a6a6a;
+  z-index: 10;
+ }
+
+.bar i {
+  height: 12px;
+  width: 12px;
+  display: inline-block;
+  background-color: #ff5f57;
+  border-radius: 50%;
+  position: absolute;
+  top: 6px;
+  left: 10px;
+}
+
+.bar i::before {
+  content: " ";
+  left: 16px;
+  background-color: #ffbd2e;
+  top: 0;
+}
+
+.bar i::after {
+  content: " ";
+  left: 32px;
+  background-color: #28ca41;
+  top: 0;
+}
+
+.main {
+  background-size: cover;
+  padding-top: 58%;
+  position: relative;
+  background-position: center center;
+  display: block;
+  width: 100%;
+  border-radius: 0;
+  -moz-transform-style: flat;
+  -webkit-transform-style: flat;
+  transform-style: flat;
+}
+
+.main::before {
+  content: "";
+    position: absolute;
+    z-index: 20;
+    box-shadow: 0 0 50px rgba(0,0,0,.75) inset;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+}

@@ -151,17 +151,6 @@ function init() {
     }
 
     if (about.isInViewport()) {
-      if (body.hasClass('body--colored')) {
-        body.css('background-color', '#89303d');
-      } else {
-        body.css('background-color', '#ffffff');
-        collection.forEach((drop) => {
-          drop.color= "#89303d";
-        });
-      }
-    }
-
-    if (portfolio.isInViewport()) {
       windmultiplier = 0.050;
 
       if (body.hasClass('body--colored')) {
@@ -170,6 +159,17 @@ function init() {
         body.css('background-color', '#ffffff');
         collection.forEach((drop) => {
           drop.color= "#455A64";
+        });
+      }
+    }
+
+    if (portfolio.isInViewport()) {
+      if (body.hasClass('body--colored')) {
+        body.css('background-color', '#89303d');
+      } else {
+        body.css('background-color', '#ffffff');
+        collection.forEach((drop) => {
+          drop.color= "#89303d";
         });
       }
     }

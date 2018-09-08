@@ -3,6 +3,14 @@ $(document).ready(function() {
       $('body').toggleClass("body--white body--colored");
     });
 
+    $('.toggle').on('click', function() {
+      if ($(this).hasClass('on')) {
+         $(this).removeClass('on');
+      } else {
+         $(this).addClass('on');
+      }
+    });
+
     $(window).on("resize scroll", function() {
       $('.section__title--about').waypoint(function(direction) {
         $('.section__title--about svg').css('display', 'block');
