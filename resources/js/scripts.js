@@ -24,6 +24,13 @@ $(document).ready(function() {
         offset: '75%'
       });
     });
+
+    $("nav a").click(function(e) {
+      console.log(e);
+      e.preventDefault();
+      var dest = $(this).attr('href');
+      $('html,body').animate({ scrollTop: $(dest).offset().top }, 'slow');
+  });
 });
 
 $.fn.isInViewport = function() {

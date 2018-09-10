@@ -33,6 +33,48 @@ canvas {
   margin: 0 auto;
 }
 
+nav { float: right; }
+
+nav a,
+nav a:visited,
+nav a:focus {
+  position: relative;
+  font-size: 2.5rem;
+  padding: 1rem 0;
+  margin: 0 1.5rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 300;
+  transition: 100ms linear;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  width: 0;
+  background: #fff;
+  transition: 400ms ease;
+}
+
+.body--white nav a::after {
+  background: rgb(78, 169, 218);
+}
+
+nav a:hover::after {
+  content: "";
+  width: 100%;
+}
+
+.body--white nav a,
+.body--white nav a:visited,
+.body--white nav a:focus {
+  color: rgb(78, 169, 218);
+}
+
 header { height: 100vh; }
 
 .header__text {
@@ -62,6 +104,10 @@ header { height: 100vh; }
   top: 0;
   color: #fff;
   text-decoration: none;
+}
+
+.body--white .social-icons a {
+  color: #666;
 }
 
 .social-icons a:hover {
@@ -123,6 +169,10 @@ header { height: 100vh; }
   font-weight: 200;
 }
 
+.body--white .section__content--text {
+  font-weight: 400;
+}
+
 .about { position: relative; }
 
 .about .section__content--text { color: #666; }
@@ -153,6 +203,17 @@ header { height: 100vh; }
   .social-icons i {
     padding-right: 1.5rem;
   }
+
+  nav a,
+  nav a:visited,
+  nav a:focus {
+    font-size: 2rem;
+    padding: 1rem 0;
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+  }
 }
 
 /***************************************************
@@ -161,7 +222,7 @@ header { height: 100vh; }
 .toggle {
   animation-name: bounce-vertical;
   animation-delay: 2.2s;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
   background-color: #ddddde;
   border-radius: 6rem;
   box-shadow: 0 1px 1px 0 rgba(255, 255, 255,.4), 0 1px 0 0 rgba(0, 0, 0, 0.10) inset;
@@ -170,7 +231,7 @@ header { height: 100vh; }
   height: 4rem;
   overflow: hidden;
   position: relative;
-  top: 5rem;
+  top: 4rem;
   transition: all .25s linear;
 }
 
@@ -180,7 +241,6 @@ header { height: 100vh; }
   40% { top: 4rem; }
   60% { top: 5rem; }
   80% { top: 4rem; }
-  100% { top: 5rem; }
 }
 
 .toggle .slide {
@@ -236,6 +296,25 @@ header { height: 100vh; }
   color: #666;
 }
 
+@media (max-width: 800px) {
+  .toggle {
+    width: 7rem;
+    height: 3rem;
+    top: 3rem;
+  }
+
+  .toggle .slide {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .toggle .slide:before,
+  .toggle .slide:after {
+    /* top: 5px; */
+    font-size: 2rem;
+    top: -10px;
+  }
+}
 /***************************************************
   End of Toggle Button
 ***************************************************/
