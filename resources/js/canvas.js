@@ -5,7 +5,7 @@ window.requestAnimFrame = (function(){
           window.oRequestAnimationFrame      ||
           window.msRequestAnimationFrame     ||
           function( callback ){
-            window.setTimeout(callback, 1000 / 60);
+            window.setTimeout(callback, 500 / 60);
           };
 })();
 
@@ -14,8 +14,8 @@ var canvas = document.getElementById('cvs'),
   height = canvas.height = document.body.offsetHeight,
   width = canvas.width = document.body.offsetWidth,
   collection = [],
-  num_drops = 100,
-  gravity = 1,
+  num_drops = 50,
+  gravity = 0.01,
   windforce = 0,
   windmultiplier = 0.009,
   maxspeed = 1,
@@ -78,8 +78,6 @@ function animate() {
 }
 
 function windtimer() {
-  // this is a super cheap way to do this,
-  // i will need to look into how to properly
   // emulate wind
   windforce = Math.random() > 0.5 ? windmultiplier : -windmultiplier;
   setTimeout(windtimer, Math.random() * (1000 * 30));
@@ -130,7 +128,7 @@ function init() {
   var portfolio = $('.section__title--portfolio');
 
   //FIXME: Eating up resources
-  $(window).on("resize scroll", function() {
+  $(window).on("load resize scroll", function() {
     var body = $('body');
 
     if (body.hasClass('body--colored')) {

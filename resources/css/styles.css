@@ -340,7 +340,7 @@ header { height: 100vh; }
   .toggle {
     width: 7rem;
     height: 3rem;
-    top: 3rem;
+    top: 2.5rem;
   }
 
   .toggle .slide {
