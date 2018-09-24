@@ -381,6 +381,40 @@ header { height: 100vh; }
 
 .portfolio__item a { text-decoration: none; }
 
+.portfolio__item .overlay {
+  position: absolute;
+  top: 8px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #666;
+  padding: 2rem;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+}
+
+.overlay h3 {
+  font-size: 2.5rem;
+  margin-top: 5px;
+  margin-bottom: 1rem;
+}
+
+.portfolio__item:hover .overlay { opacity: 1; }
+
+.tag-container {
+  display: inline-block;
+  border: 3px solid #fff;
+  padding: 7px 10px;
+  margin: 5px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
 .screen {
   position: relative;
   display: block;
@@ -483,5 +517,18 @@ header { height: 100vh; }
 @media (max-width: 800px) {
   .grid-list .portfolio__item {
       width: 100%;
+  }
+
+  .tag-container {
+    display: inline-block;
+    border: 3px solid #fff;
+    padding: 7px 10px;
+    margin: 5px;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+
+  .overlay h3 {
+    font-size: 2rem;
   }
 }
