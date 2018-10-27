@@ -12,7 +12,6 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: 'roboto', sans-serif;
-  color: rgb(78, 169, 218);
   font-size: 62.5%;
 }
 
@@ -38,6 +37,10 @@ body.body--colored {
 
 .body--colored .about .section__content--text {
   color: #fff;
+}
+
+section {
+  padding-top: 5rem;
 }
 
 canvas {
@@ -105,8 +108,10 @@ header {
 .header__text {
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 footer {
@@ -119,9 +124,13 @@ footer {
 }
 
 .tagline {
-  font-size: 3.5rem;
-  font-weight: 200;
-  text-align: left;
+  font-size: 3rem;
+  font-weight: 300;
+  color: #666;
+}
+
+.body--colored .tagline {
+  color: #fff;
 }
 
 .social-icons {
@@ -213,6 +222,7 @@ footer {
 .section__title svg {
   height: 5rem;
   display: none;
+  margin: 0 auto;
 }
 
 .animated-letter {
@@ -274,7 +284,7 @@ footer {
 }
 
 .body--white .section__content--text {
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .about {
@@ -297,12 +307,6 @@ footer {
     letter-spacing: 0.05em;
   }
 
-  .tagline {
-    font-size: 2.5rem;
-    font-weight: 200;
-    text-align: left;
-  }
-
   .name svg {
     height: 5rem;
   }
@@ -313,10 +317,15 @@ footer {
 
   .social-icons {
     font-size: 3rem;
+    width: 100vw;
   }
 
   .social-icons i {
     padding-right: 1.5rem;
+  }
+
+  .tagline {
+    font-size: 2rem;
   }
 
   nav a,
@@ -340,7 +349,7 @@ footer {
   -webkit-animation-delay: 2.2s;
   animation-delay: 2.2s;
   -webkit-animation-duration: 1.5s;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   background-color: #ddddde;
   border-radius: 6rem;
   -webkit-box-shadow: 0 1px 1px 0 rgba(255, 255, 255, .4), 0 1px 0 0 rgba(0, 0, 0, 0.10) inset;

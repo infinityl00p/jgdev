@@ -1,12 +1,12 @@
-window.requestAnimFrame = (function(){
-  return  window.requestAnimationFrame       ||
-          window.webkitRequestAnimationFrame ||
-          window.mozRequestAnimationFrame    ||
-          window.oRequestAnimationFrame      ||
-          window.msRequestAnimationFrame     ||
-          function( callback ){
-            window.setTimeout(callback, 500 / 60);
-          };
+window.requestAnimFrame = (function () {
+  return window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    window.oRequestAnimationFrame ||
+    window.msRequestAnimationFrame ||
+    function (callback) {
+      window.setTimeout(callback, 500 / 60);
+    };
 })();
 
 var canvas = document.getElementById('cvs'),
@@ -35,11 +35,11 @@ function Drop() {
 Drop.prototype = {
   constructor: Drop,
 
-  random_x: function() {
+  random_x: function () {
     var n = width * (1 + gutter);
     return (1 - (1 + gutter)) + (Math.random() * n);
   },
-  draw: function(ctx) {
+  draw: function (ctx) {
     ctx.fillStyle = this.color;
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
@@ -99,7 +99,7 @@ function init() {
   }
   windtimer();
   animate();
-  window.onresize = function() {
+  window.onresize = function () {
     height = canvas.height = document.body.offsetHeight;
     width = canvas.width = document.body.offsetWidth;
   };
@@ -110,14 +110,14 @@ function init() {
     if ($('body').hasClass('body--colored')) {
       $('body').css('background-color', '#ffffff');
       collection.forEach((drop) => {
-        drop.color= "rgb(78, 169, 218)";
+        drop.color = "rgb(78, 169, 218)";
       });
 
 
     } else {
       $('body').css('background-color', 'rgb(78, 169, 218)');
       collection.forEach((drop) => {
-        drop.color= "#ffffff";
+        drop.color = "#ffffff";
       });
     }
   });
@@ -128,12 +128,12 @@ function init() {
   var portfolio = $('.section__title--portfolio');
 
   //FIXME: Eating up resources
-  $(window).on("load resize scroll", function() {
+  $(window).on("load resize scroll", function () {
     var body = $('body');
 
     if (body.hasClass('body--colored')) {
       collection.forEach((drop) => {
-        drop.color= "#ffffff";
+        drop.color = "#ffffff";
       });
     }
 
@@ -143,7 +143,7 @@ function init() {
       } else {
         body.css('background-color', '#ffffff');
         collection.forEach((drop) => {
-          drop.color= "rgb(78, 169, 218)";
+          drop.color = "rgb(78, 169, 218)";
         });
       }
     }
@@ -156,7 +156,7 @@ function init() {
       } else {
         body.css('background-color', '#ffffff');
         collection.forEach((drop) => {
-          drop.color= "#455A64";
+          drop.color = "#455A64";
         });
       }
     }
@@ -167,7 +167,7 @@ function init() {
       } else {
         body.css('background-color', '#ffffff');
         collection.forEach((drop) => {
-          drop.color= "#89303d";
+          drop.color = "#89303d";
         });
       }
     }
