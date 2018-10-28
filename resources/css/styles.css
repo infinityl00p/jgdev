@@ -107,7 +107,7 @@ header {
 
 .header__text {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -137,6 +137,7 @@ footer {
   position: relative;
   top: 7rem;
   font-size: 5rem;
+  text-align: center;
 }
 
 .social-icons a {
@@ -204,7 +205,7 @@ footer {
 }
 
 .social-icons i {
-  padding-right: 3rem;
+  padding: 0 1.5rem;
 }
 
 .social-icons i:hover {
@@ -278,6 +279,11 @@ footer {
   top: 5rem;
 }
 
+.about .section__content {
+  top: 0;
+  padding-top: 5rem;
+}
+
 .section__content--text {
   font-size: 2.5rem;
   font-weight: 200;
@@ -337,6 +343,10 @@ footer {
     text-decoration: none;
     color: #fff;
     font-weight: 300;
+  }
+
+  .about {
+    padding-bottom: 10rem;
   }
 }
 
